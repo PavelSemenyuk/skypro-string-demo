@@ -32,11 +32,13 @@ public class CalculatorController {
         int result = calculatorService.minus(num1,num2);
         return num1 + " - " + num2 + " = " + result;
     }
+
     @GetMapping(path =" /multiply")
     public String multiply(@RequestParam("num1") int num1, @RequestParam("num2") int num2){
         int result = calculatorService.multiply(num1,num2);
         return num1 + " * " + num2 + " = " + result;
     }
+
     @GetMapping(path =" /divide")
     public ResponseEntity<String> divide(@RequestParam("num1") int num1, @RequestParam("num2") int num2){
         try {
